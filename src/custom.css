@@ -1,0 +1,41 @@
+body {
+	background-color: #31314B;
+}
+
+.list-group-item {
+	background-color: transparent;
+}
+
+h1, h3 {
+	color: #F5F6F4;
+}
+
+h6 {
+	color: #31314B;
+}
+
+header {
+	background-color: #D85333;
+	text-transform: uppercase;
+}
+
+.card {
+	background-color: #F5F6F4;
+}
+
+a {
+	color: #D85333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #E68564;
+}
+
+.text-white {
+	color: #F5F6F4;
+}
+
+.form-control-sm {
+	font-size: .800rem;
+}

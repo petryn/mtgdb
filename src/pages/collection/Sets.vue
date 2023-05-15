@@ -1,26 +1,25 @@
 <script setup>
-	import setsData from '../../data/SetList.json';
-	import { ref, inject } from 'vue';
+	import { inject } from 'vue';
 
-	const dataBase = inject('dataBase');
+	//load all sets json
+	const res = await fetch('/data/SetList.json');
+	const setsData = await res.json();
 
-	//get local database
-	const localData = dataBase.getData();
-
+	//get current user data
+	const userData = inject('userData');
+	
+	//array for template loop
 	let fullData = [];
 
-	for (const set of setsData.data) {		
-
-		if(set.code in localData.sets){
-			console.log(set);
-
-			set.inCollection = Object.keys(localData.sets[set.code]).length;
-			set.keyruneCode = set.keyruneCode.toLowerCase();
-			fullData.push(set);
+	if(userData?.collection){
+		for (const set of setsData.data) {			
+			if(set.code in userData.collection){
+				set.inCollection = Object.keys(userData.collection[set.code]).length;
+				set.keyruneCode = set.keyruneCode.toLowerCase();
+				fullData.push(set);
+			}
 		}
-	}
-
-
+	}	
 </script>
 
 <template>

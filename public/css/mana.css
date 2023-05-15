@@ -1,0 +1,1602 @@
+@font-face {
+  font-family: "Mana";
+  src: url("../fonts/mana.eot?v=1.15.5");
+  src: url("../fonts/mana.eot?#iefix&v=1.15.5") format("embedded-opentype"), url("../fonts/mana.woff?v=1.15.5") format("woff"), url("../fonts/mana.ttf?v=1.15.5") format("truetype"), url("../fonts/mana.svg?v=1.15.5#mana") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MPlantin";
+  src: url("../fonts/mplantin.eot?v=1.15.5");
+  src: url("../fonts/mplantin.eot?#iefix&v=1.15.5") format("embedded-opentype"), url("../fonts/mplantin.woff?v=1.15.5") format("woff"), url("../fonts/mplantin.ttf?v=1.15.5") format("truetype"), url("../fonts/mplantin.svg?v=1.15.5#mplantin") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.magic {
+  display: inline-block;
+  font: normal normal normal 14px Mana;
+  font-size: inherit;
+  line-height: 1em;
+  text-rendering: auto;
+  transform: translate(0, 0);
+  speak: none;
+  text-transform: none;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.magic-w::before {
+  content: "\e600";
+}
+.magic-w-original::before {
+  content: "\e997";
+}
+.magic-w-list::before {
+  content: "\e998";
+}
+.magic-u::before {
+  content: "\e601";
+}
+.magic-b::before {
+  content: "\e602";
+}
+.magic-r::before {
+  content: "\e603";
+}
+.magic-g::before {
+  content: "\e604";
+}
+.magic-0::before {
+  content: "\e605";
+}
+.magic-1::before {
+  content: "\e606";
+}
+.magic-2::before {
+  content: "\e607";
+}
+.magic-3::before {
+  content: "\e608";
+}
+.magic-4::before {
+  content: "\e609";
+}
+.magic-5::before {
+  content: "\e60a";
+}
+.magic-6::before {
+  content: "\e60b";
+}
+.magic-7::before {
+  content: "\e60c";
+}
+.magic-8::before {
+  content: "\e60d";
+}
+.magic-9::before {
+  content: "\e60e";
+}
+.magic-10::before {
+  content: "\e60f";
+}
+.magic-11::before {
+  content: "\e610";
+}
+.magic-12::before {
+  content: "\e611";
+}
+.magic-13::before {
+  content: "\e612";
+}
+.magic-14::before {
+  content: "\e613";
+}
+.magic-15::before {
+  content: "\e614";
+}
+.magic-16::before {
+  content: "\e62a";
+}
+.magic-17::before {
+  content: "\e62b";
+}
+.magic-18::before {
+  content: "\e62c";
+}
+.magic-19::before {
+  content: "\e62d";
+}
+.magic-20::before {
+  content: "\e62e";
+}
+.magic-x::before {
+  content: "\e615";
+}
+.magic-y::before {
+  content: "\e616";
+}
+.magic-z::before {
+  content: "\e617";
+}
+.magic-p::before {
+  content: "\e618";
+}
+.magic-s::before {
+  content: "\e619";
+}
+.magic-s-mtga::before {
+  content: "\e996";
+}
+.magic-c::before {
+  content: "\e904";
+}
+.magic-e::before, .magic-energy::before {
+  content: "\e907";
+}
+.magic-acorn::before {
+  content: "\e929";
+}
+.magic-ticket::before, .magic-tk::before {
+  content: "\e9c4";
+}
+.magic-1-2::before {
+  content: "\e902";
+}
+.magic-infinity::before {
+  content: "\e903";
+}
+.magic-tap::before {
+  content: "\e61a";
+}
+.magic-untap::before {
+  content: "\e61b";
+}
+.magic-tap-alt::before {
+  content: "\e61c";
+}
+.magic-chaos::before {
+  content: "\e61d";
+}
+.magic-artifact::before {
+  content: "\e61e";
+}
+.magic-commander::before {
+  content: "\e9c6";
+}
+.magic-conspiracy::before {
+  content: "\e972";
+}
+.magic-creature::before {
+  content: "\e61f";
+}
+.magic-enchantment::before {
+  content: "\e620";
+}
+.magic-dungeon::before {
+  content: "\e995";
+}
+.magic-instant::before {
+  content: "\e621";
+}
+.magic-land::before {
+  content: "\e622";
+}
+.magic-phenomenon::before {
+  content: "\e96e";
+}
+.magic-plane::before {
+  content: "\e96f";
+}
+.magic-planeswalker::before {
+  content: "\e623";
+}
+.magic-rarity::before {
+  content: "\e96c";
+}
+.magic-saga::before {
+  content: "\e92a";
+}
+.magic-scheme::before {
+  content: "\e970";
+}
+.magic-sorcery::before {
+  content: "\e624";
+}
+.magic-token::before {
+  content: "\e96d";
+}
+.magic-tribal::before, .magic-multiple::before {
+  content: "\e925";
+}
+.magic-vanguard::before {
+  content: "\e971";
+}
+.magic-multicolor::before {
+  content: "\e985";
+}
+.magic-hand::before {
+  content: "\e9ca";
+}
+.magic-library::before {
+  content: "\e9cb";
+}
+.magic-graveyard::before {
+  content: "\e9cc";
+}
+.magic-exile::before {
+  content: "\e9cd";
+}
+.magic-wu::before, .magic-wb::before, .magic-rw::after, .magic-gw::after, .magic-2w::after {
+  content: "\e600";
+}
+.magic-ub::before, .magic-ur::before, .magic-wu::after, .magic-gu::after, .magic-2u::after {
+  content: "\e601";
+}
+.magic-br::before, .magic-bg::before, .magic-wb::after, .magic-ub::after, .magic-2b::after {
+  content: "\e602";
+}
+.magic-rw::before, .magic-rg::before, .magic-ur::after, .magic-br::after, .magic-2r::after {
+  content: "\e603";
+}
+.magic-gw::before, .magic-gu::before, .magic-bg::after, .magic-rg::after, .magic-2g::after {
+  content: "\e604";
+}
+.magic-2w::before, .magic-2u::before, .magic-2b::before, .magic-2r::before, .magic-2g::before {
+  content: "\e607";
+}
+.magic-wp::before, .magic-up::before, .magic-bp::before, .magic-rp::before, .magic-gp::before, .magic-wup::before, .magic-wup::after, .magic-wbp::before, .magic-wbp::after, .magic-ubp::before, .magic-ubp::after, .magic-urp::before, .magic-urp::after, .magic-brp::before, .magic-brp::after, .magic-bgp::before, .magic-bgp::after, .magic-rwp::before, .magic-rwp::after, .magic-rgp::before, .magic-rgp::after, .magic-gwp::before, .magic-gwp::after, .magic-gup::before, .magic-gup::after {
+  content: "\e618";
+}
+.magic-100::before {
+  content: "\e900";
+}
+.magic-1000000::before {
+  content: "\e901";
+}
+.magic-loyalty-up::before {
+  content: "\e627";
+}
+.magic-loyalty-down::before {
+  content: "\e625";
+}
+.magic-loyalty-zero::before {
+  content: "\e626";
+}
+.magic-loyalty-start::before {
+  content: "\e628";
+}
+.magic-level::before {
+  content: "\e9c7";
+}
+.magic-level::after {
+  content: "\e9c8";
+}
+.magic-dfc-day::before {
+  content: "\e906";
+}
+.magic-dfc-emrakul::before {
+  content: "\e90a";
+}
+.magic-dfc-enchantment::before {
+  content: "\e920";
+}
+.magic-dfc-ignite::before {
+  content: "\e908";
+}
+.magic-dfc-land::before {
+  content: "\e9c5";
+}
+.magic-dfc-lesson::before {
+  content: "\e98f";
+}
+.magic-dfc-modal-back::before {
+  content: "\e984";
+}
+.magic-dfc-modal-face::before {
+  content: "\e983";
+}
+.magic-dfc-moon::before {
+  content: "\e90b";
+}
+.magic-dfc-night::before {
+  content: "\e905";
+}
+.magic-dfc-saga::before {
+  content: "\e9cf";
+}
+.magic-dfc-saga-creature::before {
+  content: "\e9d0";
+}
+.magic-dfc-spark::before {
+  content: "\e909";
+}
+.magic-flashback::before {
+  content: "\e629";
+}
+.magic-power::before {
+  content: "\e921";
+}
+.magic-toughness::before {
+  content: "\e922";
+}
+.magic-artist-brush::before {
+  content: "\e923";
+}
+.magic-artist-nib::before {
+  content: "\e924";
+}
+.magic-guild-azorius::before {
+  content: "\e90c";
+}
+.magic-guild-boros::before {
+  content: "\e90d";
+}
+.magic-guild-dimir::before {
+  content: "\e90e";
+}
+.magic-guild-golgari::before {
+  content: "\e90f";
+}
+.magic-guild-gruul::before {
+  content: "\e910";
+}
+.magic-guild-izzet::before {
+  content: "\e911";
+}
+.magic-guild-orzhov::before {
+  content: "\e912";
+}
+.magic-guild-rakdos::before {
+  content: "\e913";
+}
+.magic-guild-selesnya::before {
+  content: "\e914";
+}
+.magic-guild-simic::before {
+  content: "\e915";
+}
+.magic-clan-abzan::before {
+  content: "\e916";
+}
+.magic-clan-jeskai::before {
+  content: "\e917";
+}
+.magic-clan-mardu::before {
+  content: "\e918";
+}
+.magic-clan-sultai::before {
+  content: "\e919";
+}
+.magic-clan-temur::before {
+  content: "\e91a";
+}
+.magic-clan-atarka::before {
+  content: "\e91b";
+}
+.magic-clan-dromoka::before {
+  content: "\e91c";
+}
+.magic-clan-kolaghan::before {
+  content: "\e91d";
+}
+.magic-clan-ojutai::before {
+  content: "\e91e";
+}
+.magic-clan-silumgar::before {
+  content: "\e91f";
+}
+.magic-polis-setessa::before {
+  content: "\e926";
+}
+.magic-polis-akros::before {
+  content: "\e927";
+}
+.magic-polis-meletis::before {
+  content: "\e928";
+}
+.magic-school-lorehold::before {
+  content: "\e99a";
+}
+.magic-school-prismari::before {
+  content: "\e99c";
+}
+.magic-school-quandrix::before {
+  content: "\e99e";
+}
+.magic-school-silverquill::before {
+  content: "\e9a0";
+}
+.magic-school-witherbloom::before {
+  content: "\e9a2";
+}
+.magic-counter-arrow::before {
+  content: "\e92b";
+}
+.magic-counter-brick::before {
+  content: "\e92c";
+}
+.magic-counter-charge::before {
+  content: "\e92d";
+}
+.magic-counter-devotion::before {
+  content: "\e92e";
+}
+.magic-counter-doom::before {
+  content: "\e92f";
+}
+.magic-counter-echo::before {
+  content: "\e930";
+}
+.magic-counter-flame::before {
+  content: "\e931";
+}
+.magic-counter-flood::before {
+  content: "\e932";
+}
+.magic-counter-fungus::before {
+  content: "\e933";
+}
+.magic-counter-gold::before {
+  content: "\e934";
+}
+.magic-counter-ki::before {
+  content: "\e935";
+}
+.magic-counter-lore::before {
+  content: "\e936";
+}
+.magic-counter-loyalty::before {
+  content: "\e937";
+}
+.magic-counter-mining::before {
+  content: "\e938";
+}
+.magic-counter-minus::before {
+  content: "\e939";
+}
+.magic-counter-minus-uneven::before {
+  content: "\e943";
+}
+.magic-counter-muster::before {
+  content: "\e93a";
+}
+.magic-counter-paw::before {
+  content: "\e93b";
+}
+.magic-counter-pin::before {
+  content: "\e93c";
+}
+.magic-counter-plus::before {
+  content: "\e93d";
+}
+.magic-counter-plus-uneven::before {
+  content: "\e944";
+}
+.magic-counter-scream::before {
+  content: "\e93e";
+}
+.magic-counter-skeleton::before {
+  content: "\e93f";
+}
+.magic-counter-skull::before {
+  content: "\e940";
+}
+.magic-counter-slime::before {
+  content: "\e941";
+}
+.magic-counter-time::before {
+  content: "\e942";
+}
+.magic-counter-verse::before {
+  content: "\e945";
+}
+.magic-counter-vortex::before {
+  content: "\e946";
+}
+.magic-counter-shield::before {
+  content: "\e9c3";
+}
+.magic-counter-stun::before {
+  content: "\e9c2";
+}
+.magic-ability-activated::before, .magic-ability-crew::before, .magic-ability-cycling::before {
+  content: "\e947";
+}
+.magic-ability-adamant::before {
+  content: "\e974";
+}
+.magic-ability-adapt::before {
+  content: "\e975";
+}
+.magic-ability-addendum::before {
+  content: "\e976";
+}
+.magic-ability-adventure::before {
+  content: "\e948";
+}
+.magic-ability-afflict::before {
+  content: "\e977";
+}
+.magic-ability-afterlife::before {
+  content: "\e978";
+}
+.magic-ability-aftermath::before {
+  content: "\e979";
+}
+.magic-ability-alliance::before {
+  content: "\e9b5";
+}
+.magic-ability-amass::before {
+  content: "\e97a";
+}
+.magic-ability-ascend::before {
+  content: "\e94a";
+}
+.magic-ability-blitz::before {
+  content: "\e9b4";
+}
+.magic-ability-boast::before {
+  content: "\e991";
+}
+.magic-ability-casualty::before {
+  content: "\e9b7";
+}
+.magic-ability-changeling::before {
+  content: "\e9a6";
+}
+.magic-ability-channel::before {
+  content: "\e9b1";
+}
+.magic-ability-cleave::before {
+  content: "\e9ad";
+}
+.magic-ability-combat-condition::before {
+  content: "\e9ce";
+}
+.magic-ability-companion::before {
+  content: "\e97b";
+}
+.magic-ability-constellation::before {
+  content: "\e97c";
+}
+.magic-ability-convoke::before {
+  content: "\e949";
+}
+.magic-ability-corrupted::before {
+  content: "\e9c0";
+}
+.magic-ability-coven::before {
+  content: "\e9aa";
+}
+.magic-ability-d20::before {
+  content: "\e999";
+}
+.magic-ability-day-night::before {
+  content: "\e9a8";
+}
+.magic-ability-daybound-nightbound::before {
+  content: "\e9a9";
+}
+.magic-ability-deathtouch::before {
+  content: "\e94b";
+}
+.magic-ability-decayed::before {
+  content: "\e9ac";
+}
+.magic-ability-defender::before {
+  content: "\e94c";
+}
+.magic-ability-devotion::before {
+  content: "\e97d";
+}
+.magic-ability-disturb::before {
+  content: "\e9ae";
+}
+.magic-ability-domain::before {
+  content: "\e9a7";
+}
+.magic-ability-double-strike::before {
+  content: "\e94d";
+}
+.magic-ability-dungeon::before {
+  content: "\e995";
+}
+.magic-ability-embalm::before {
+  content: "\e97e";
+}
+.magic-ability-enlist::before {
+  content: "\e9ba";
+}
+.magic-ability-enrage::before {
+  content: "\e94e";
+}
+.magic-ability-escape::before {
+  content: "\e969";
+}
+.magic-ability-eternalize::before {
+  content: "\e97f";
+}
+.magic-ability-exploit::before {
+  content: "\e9af";
+}
+.magic-ability-explore::before {
+  content: "\e94f";
+}
+.magic-ability-fabricate::before {
+  content: "\e9a5";
+}
+.magic-ability-first-strike::before {
+  content: "\e950";
+}
+.magic-ability-flash::before {
+  content: "\e951";
+}
+.magic-ability-flying::before {
+  content: "\e952";
+}
+.magic-ability-for-mirrodin::before {
+  content: "\e9c1";
+}
+.magic-ability-foretell::before {
+  content: "\e990";
+}
+.magic-ability-goad::before {
+  content: "\e9c9";
+}
+.magic-ability-haste::before {
+  content: "\e953";
+}
+.magic-ability-hexproof::before {
+  content: "\e954";
+}
+.magic-ability-hexproof-black::before {
+  content: "\e955";
+}
+.magic-ability-hexproof-blue::before {
+  content: "\e956";
+}
+.magic-ability-hexproof-green::before {
+  content: "\e957";
+}
+.magic-ability-hexproof-red::before {
+  content: "\e958";
+}
+.magic-ability-hexproof-white::before {
+  content: "\e959";
+}
+.magic-ability-hideaway::before {
+  content: "\e9b8";
+}
+.magic-ability-indestructible::before {
+  content: "\e95a";
+}
+.magic-ability-investigate::before {
+  content: "\e9ab";
+}
+.magic-ability-jumpstart::before {
+  content: "\e95b";
+}
+.magic-ability-kicker::before {
+  content: "\e989";
+}
+.magic-ability-landfall::before {
+  content: "\e988";
+}
+.magic-ability-learn::before {
+  content: "\e994";
+}
+.magic-ability-lifelink::before {
+  content: "\e95c";
+}
+.magic-ability-magecraft::before {
+  content: "\e993";
+}
+.magic-ability-meld::before {
+  content: "\e9bd";
+}
+.magic-ability-menace::before {
+  content: "\e95d";
+}
+.magic-ability-mentor::before {
+  content: "\e95e";
+}
+.magic-ability-mutate::before {
+  content: "\e980";
+}
+.magic-ability-ninjutsu::before {
+  content: "\e9b2";
+}
+.magic-ability-obscura::before {
+  content: "\e9b6";
+}
+.magic-ability-party::before {
+  content: "\e987";
+}
+.magic-ability-phyrexian::before {
+  content: "\e618";
+}
+.magic-ability-proliferate::before {
+  content: "\e981";
+}
+.magic-ability-prototype::before {
+  content: "\e9be";
+}
+.magic-ability-prowess::before {
+  content: "\e982";
+}
+.magic-ability-raid::before {
+  content: "\e95f";
+}
+.magic-ability-reach::before {
+  content: "\e960";
+}
+.magic-ability-read-ahead::before {
+  content: "\e9b9";
+}
+.magic-ability-reconfigure::before {
+  content: "\e9b3";
+}
+.magic-ability-revolt::before {
+  content: "\e961";
+}
+.magic-ability-riot::before {
+  content: "\e973";
+}
+.magic-ability-specialize::before {
+  content: "\e9bb";
+}
+.magic-ability-spectacle::before {
+  content: "\e96b";
+}
+.magic-ability-static::before, .magic-ability-enchant::before, .magic-ability-improvise::before {
+  content: "\e962";
+}
+.magic-ability-summoning-sickness::before {
+  content: "\e96a";
+}
+.magic-ability-surveil::before {
+  content: "\e963";
+}
+.magic-ability-toxic::before {
+  content: "\e9bf";
+}
+.magic-ability-training::before {
+  content: "\e9b0";
+}
+.magic-ability-trample::before {
+  content: "\e964";
+}
+.magic-ability-transform::before {
+  content: "\e965";
+}
+.magic-ability-triggered::before {
+  content: "\e966";
+}
+.magic-ability-undergrowth::before {
+  content: "\e967";
+}
+.magic-ability-unearth::before {
+  content: "\e9bc";
+}
+.magic-ability-vigilance::before {
+  content: "\e968";
+}
+.magic-ability-ward::before {
+  content: "\e992";
+}
+
+.magic-cost {
+  background-color: #beb9b2;
+  border-radius: 1em;
+  color: #111;
+  font-size: 0.95em;
+  width: 1.3em;
+  height: 1.3em;
+  line-height: 1.35em;
+  text-align: center;
+}
+.magic-cost.magic-w, .magic-cost.magic-wp {
+  background-color: #f0f2c0;
+}
+.magic-cost.magic-u, .magic-cost.magic-up {
+  background-color: #b5cde3;
+}
+.magic-cost.magic-b, .magic-cost.magic-bp {
+  background-color: #aca29a;
+}
+.magic-cost.magic-r, .magic-cost.magic-rp {
+  background-color: #db8664;
+}
+.magic-cost.magic-g, .magic-cost.magic-gp {
+  background-color: #93b483;
+}
+.magic-cost.magic-wu, .magic-cost.magic-wb, .magic-cost.magic-ub, .magic-cost.magic-ur, .magic-cost.magic-br, .magic-cost.magic-bg, .magic-cost.magic-rw, .magic-cost.magic-rg, .magic-cost.magic-gw, .magic-cost.magic-gu, .magic-cost.magic-2w, .magic-cost.magic-2u, .magic-cost.magic-2b, .magic-cost.magic-2r, .magic-cost.magic-2g, .magic-cost.magic-wup, .magic-cost.magic-wbp, .magic-cost.magic-ubp, .magic-cost.magic-urp, .magic-cost.magic-brp, .magic-cost.magic-bgp, .magic-cost.magic-rwp, .magic-cost.magic-rgp, .magic-cost.magic-gwp, .magic-cost.magic-gup {
+  position: relative;
+  width: 1.3em;
+  height: 1.3em;
+}
+.magic-cost.magic-wu::before, .magic-cost.magic-wu::after, .magic-cost.magic-wb::before, .magic-cost.magic-wb::after, .magic-cost.magic-ub::before, .magic-cost.magic-ub::after, .magic-cost.magic-ur::before, .magic-cost.magic-ur::after, .magic-cost.magic-br::before, .magic-cost.magic-br::after, .magic-cost.magic-bg::before, .magic-cost.magic-bg::after, .magic-cost.magic-rw::before, .magic-cost.magic-rw::after, .magic-cost.magic-rg::before, .magic-cost.magic-rg::after, .magic-cost.magic-gw::before, .magic-cost.magic-gw::after, .magic-cost.magic-gu::before, .magic-cost.magic-gu::after, .magic-cost.magic-2w::before, .magic-cost.magic-2w::after, .magic-cost.magic-2u::before, .magic-cost.magic-2u::after, .magic-cost.magic-2b::before, .magic-cost.magic-2b::after, .magic-cost.magic-2r::before, .magic-cost.magic-2r::after, .magic-cost.magic-2g::before, .magic-cost.magic-2g::after, .magic-cost.magic-wup::before, .magic-cost.magic-wup::after, .magic-cost.magic-wbp::before, .magic-cost.magic-wbp::after, .magic-cost.magic-ubp::before, .magic-cost.magic-ubp::after, .magic-cost.magic-urp::before, .magic-cost.magic-urp::after, .magic-cost.magic-brp::before, .magic-cost.magic-brp::after, .magic-cost.magic-bgp::before, .magic-cost.magic-bgp::after, .magic-cost.magic-rwp::before, .magic-cost.magic-rwp::after, .magic-cost.magic-rgp::before, .magic-cost.magic-rgp::after, .magic-cost.magic-gwp::before, .magic-cost.magic-gwp::after, .magic-cost.magic-gup::before, .magic-cost.magic-gup::after {
+  font-size: 0.55em !important;
+  position: absolute;
+}
+.magic-cost.magic-wu::before, .magic-cost.magic-wb::before, .magic-cost.magic-ub::before, .magic-cost.magic-ur::before, .magic-cost.magic-br::before, .magic-cost.magic-bg::before, .magic-cost.magic-rw::before, .magic-cost.magic-rg::before, .magic-cost.magic-gw::before, .magic-cost.magic-gu::before, .magic-cost.magic-2w::before, .magic-cost.magic-2u::before, .magic-cost.magic-2b::before, .magic-cost.magic-2r::before, .magic-cost.magic-2g::before, .magic-cost.magic-wup::before, .magic-cost.magic-wbp::before, .magic-cost.magic-ubp::before, .magic-cost.magic-urp::before, .magic-cost.magic-brp::before, .magic-cost.magic-bgp::before, .magic-cost.magic-rwp::before, .magic-cost.magic-rgp::before, .magic-cost.magic-gwp::before, .magic-cost.magic-gup::before {
+  top: -0.38em;
+  left: 0.28em;
+}
+.magic-cost.magic-wu::after, .magic-cost.magic-wb::after, .magic-cost.magic-ub::after, .magic-cost.magic-ur::after, .magic-cost.magic-br::after, .magic-cost.magic-bg::after, .magic-cost.magic-rw::after, .magic-cost.magic-rg::after, .magic-cost.magic-gw::after, .magic-cost.magic-gu::after, .magic-cost.magic-2w::after, .magic-cost.magic-2u::after, .magic-cost.magic-2b::after, .magic-cost.magic-2r::after, .magic-cost.magic-2g::after, .magic-cost.magic-wup::after, .magic-cost.magic-wbp::after, .magic-cost.magic-ubp::after, .magic-cost.magic-urp::after, .magic-cost.magic-brp::after, .magic-cost.magic-bgp::after, .magic-cost.magic-rwp::after, .magic-cost.magic-rgp::after, .magic-cost.magic-gwp::after, .magic-cost.magic-gup::after {
+  top: 0.5em;
+  left: 1em;
+}
+.magic-cost.magic-wu, .magic-cost.magic-wup {
+  background: #edf2b0;
+  background: -moz-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #a6c1dd 50%, #a6c1dd 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #edf2b0), color-stop(50%, #edf2b0), color-stop(50%, #a6c1dd), color-stop(100%, #a6c1dd));
+  background: -webkit-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #a6c1dd 50%, #a6c1dd 100%);
+  background: -o-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #a6c1dd 50%, #a6c1dd 100%);
+  background: -ms-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #a6c1dd 50%, #a6c1dd 100%);
+  background: linear-gradient(135deg, #edf2b0 0%, #edf2b0 50%, #a6c1dd 50%, #a6c1dd 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#edf2b0", endColorstr="#a6c1dd",GradientType=1 );
+}
+.magic-cost.magic-wb, .magic-cost.magic-wbp {
+  background: #edf2b0;
+  background: -moz-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #9c9188 50%, #9c9188 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #edf2b0), color-stop(50%, #edf2b0), color-stop(50%, #9c9188), color-stop(100%, #9c9188));
+  background: -webkit-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #9c9188 50%, #9c9188 100%);
+  background: -o-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #9c9188 50%, #9c9188 100%);
+  background: -ms-linear-gradient(-45deg, #edf2b0 0%, #edf2b0 50%, #9c9188 50%, #9c9188 100%);
+  background: linear-gradient(135deg, #edf2b0 0%, #edf2b0 50%, #9c9188 50%, #9c9188 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#edf2b0", endColorstr="#9c9188",GradientType=1 );
+}
+.magic-cost.magic-ub, .magic-cost.magic-ubp {
+  background: #a6c1dd;
+  background: -moz-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #9c9188 50%, #9c9188 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #a6c1dd), color-stop(50%, #a6c1dd), color-stop(50%, #9c9188), color-stop(100%, #9c9188));
+  background: -webkit-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #9c9188 50%, #9c9188 100%);
+  background: -o-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #9c9188 50%, #9c9188 100%);
+  background: -ms-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #9c9188 50%, #9c9188 100%);
+  background: linear-gradient(135deg, #a6c1dd 0%, #a6c1dd 50%, #9c9188 50%, #9c9188 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#a6c1dd", endColorstr="#9c9188",GradientType=1 );
+}
+.magic-cost.magic-ur, .magic-cost.magic-urp {
+  background: #a6c1dd;
+  background: -moz-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #db8664 50%, #db8664 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #a6c1dd), color-stop(50%, #a6c1dd), color-stop(50%, #db8664), color-stop(100%, #db8664));
+  background: -webkit-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #db8664 50%, #db8664 100%);
+  background: -o-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #db8664 50%, #db8664 100%);
+  background: -ms-linear-gradient(-45deg, #a6c1dd 0%, #a6c1dd 50%, #db8664 50%, #db8664 100%);
+  background: linear-gradient(135deg, #a6c1dd 0%, #a6c1dd 50%, #db8664 50%, #db8664 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#a6c1dd", endColorstr="#db8664",GradientType=1 );
+}
+.magic-cost.magic-br, .magic-cost.magic-brp {
+  background: #aca29a;
+  background: -moz-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #db8664 50%, #db8664 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #aca29a), color-stop(50%, #aca29a), color-stop(50%, #db8664), color-stop(100%, #db8664));
+  background: -webkit-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #db8664 50%, #db8664 100%);
+  background: -o-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #db8664 50%, #db8664 100%);
+  background: -ms-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #db8664 50%, #db8664 100%);
+  background: linear-gradient(135deg, #aca29a 0%, #aca29a 50%, #db8664 50%, #db8664 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#aca29a", endColorstr="#db8664",GradientType=1 );
+}
+.magic-cost.magic-bg, .magic-cost.magic-bgp {
+  background: #aca29a;
+  background: -moz-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #93b483 50%, #93b483 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #aca29a), color-stop(50%, #aca29a), color-stop(50%, #93b483), color-stop(100%, #93b483));
+  background: -webkit-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #93b483 50%, #93b483 100%);
+  background: -o-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #93b483 50%, #93b483 100%);
+  background: -ms-linear-gradient(-45deg, #aca29a 0%, #aca29a 50%, #93b483 50%, #93b483 100%);
+  background: linear-gradient(135deg, #aca29a 0%, #aca29a 50%, #93b483 50%, #93b483 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#aca29a", endColorstr="#93b483",GradientType=1 );
+}
+.magic-cost.magic-rw, .magic-cost.magic-rwp {
+  background: #db8664;
+  background: -moz-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #db8664), color-stop(50%, #db8664), color-stop(50%, #edf2b0), color-stop(100%, #edf2b0));
+  background: -webkit-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -o-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -ms-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #edf2b0 50%, #edf2b0 100%);
+  background: linear-gradient(135deg, #db8664 0%, #db8664 50%, #edf2b0 50%, #edf2b0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#db8664", endColorstr="#edf2b0",GradientType=1 );
+}
+.magic-cost.magic-rg, .magic-cost.magic-rgp {
+  background: #db8664;
+  background: -moz-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #93b483 50%, #93b483 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #db8664), color-stop(50%, #db8664), color-stop(50%, #93b483), color-stop(100%, #93b483));
+  background: -webkit-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #93b483 50%, #93b483 100%);
+  background: -o-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #93b483 50%, #93b483 100%);
+  background: -ms-linear-gradient(-45deg, #db8664 0%, #db8664 50%, #93b483 50%, #93b483 100%);
+  background: linear-gradient(135deg, #db8664 0%, #db8664 50%, #93b483 50%, #93b483 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#db8664", endColorstr="#93b483",GradientType=1 );
+}
+.magic-cost.magic-gw, .magic-cost.magic-gwp {
+  background: #93b483;
+  background: -moz-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #93b483), color-stop(50%, #93b483), color-stop(50%, #edf2b0), color-stop(100%, #edf2b0));
+  background: -webkit-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -o-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -ms-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #edf2b0 50%, #edf2b0 100%);
+  background: linear-gradient(135deg, #93b483 0%, #93b483 50%, #edf2b0 50%, #edf2b0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#93b483", endColorstr="#edf2b0",GradientType=1 );
+}
+.magic-cost.magic-gu, .magic-cost.magic-gup {
+  background: #93b483;
+  background: -moz-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #b5cde3 50%, #b5cde3 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #93b483), color-stop(50%, #93b483), color-stop(50%, #b5cde3), color-stop(100%, #b5cde3));
+  background: -webkit-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #b5cde3 50%, #b5cde3 100%);
+  background: -o-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #b5cde3 50%, #b5cde3 100%);
+  background: -ms-linear-gradient(-45deg, #93b483 0%, #93b483 50%, #b5cde3 50%, #b5cde3 100%);
+  background: linear-gradient(135deg, #93b483 0%, #93b483 50%, #b5cde3 50%, #b5cde3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#93b483", endColorstr="#b5cde3",GradientType=1 );
+}
+.magic-cost.magic-2w {
+  background: #beb9b2;
+  background: -moz-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #beb9b2), color-stop(50%, #beb9b2), color-stop(50%, #edf2b0), color-stop(100%, #edf2b0));
+  background: -webkit-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -o-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #edf2b0 50%, #edf2b0 100%);
+  background: -ms-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #edf2b0 50%, #edf2b0 100%);
+  background: linear-gradient(135deg, #beb9b2 0%, #beb9b2 50%, #edf2b0 50%, #edf2b0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#beb9b2", endColorstr="#edf2b0",GradientType=1 );
+}
+.magic-cost.magic-2u {
+  background: #beb9b2;
+  background: -moz-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #b5cde3 50%, #b5cde3 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #beb9b2), color-stop(50%, #beb9b2), color-stop(50%, #b5cde3), color-stop(100%, #b5cde3));
+  background: -webkit-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #b5cde3 50%, #b5cde3 100%);
+  background: -o-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #b5cde3 50%, #b5cde3 100%);
+  background: -ms-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #b5cde3 50%, #b5cde3 100%);
+  background: linear-gradient(135deg, #beb9b2 0%, #beb9b2 50%, #b5cde3 50%, #b5cde3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#beb9b2", endColorstr="#b5cde3",GradientType=1 );
+}
+.magic-cost.magic-2b {
+  background: #beb9b2;
+  background: -moz-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #9c9188 50%, #9c9188 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #beb9b2), color-stop(50%, #beb9b2), color-stop(50%, #9c9188), color-stop(100%, #9c9188));
+  background: -webkit-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #9c9188 50%, #9c9188 100%);
+  background: -o-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #9c9188 50%, #9c9188 100%);
+  background: -ms-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #9c9188 50%, #9c9188 100%);
+  background: linear-gradient(135deg, #beb9b2 0%, #beb9b2 50%, #9c9188 50%, #9c9188 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#beb9b2", endColorstr="#9c9188",GradientType=1 );
+}
+.magic-cost.magic-2r {
+  background: #beb9b2;
+  background: -moz-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #db8664 50%, #db8664 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #beb9b2), color-stop(50%, #beb9b2), color-stop(50%, #db8664), color-stop(100%, #db8664));
+  background: -webkit-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #db8664 50%, #db8664 100%);
+  background: -o-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #db8664 50%, #db8664 100%);
+  background: -ms-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #db8664 50%, #db8664 100%);
+  background: linear-gradient(135deg, #beb9b2 0%, #beb9b2 50%, #db8664 50%, #db8664 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#beb9b2", endColorstr="#db8664",GradientType=1 );
+}
+.magic-cost.magic-2g {
+  background: #beb9b2;
+  background: -moz-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #93b483 50%, #93b483 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #beb9b2), color-stop(50%, #beb9b2), color-stop(50%, #93b483), color-stop(100%, #93b483));
+  background: -webkit-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #93b483 50%, #93b483 100%);
+  background: -o-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #93b483 50%, #93b483 100%);
+  background: -ms-linear-gradient(-45deg, #beb9b2 0%, #beb9b2 50%, #93b483 50%, #93b483 100%);
+  background: linear-gradient(135deg, #beb9b2 0%, #beb9b2 50%, #93b483 50%, #93b483 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#beb9b2", endColorstr="#93b483",GradientType=1 );
+}
+.magic-cost.magic-p::before, .magic-cost.magic-wp::before, .magic-cost.magic-up::before, .magic-cost.magic-bp::before, .magic-cost.magic-rp::before, .magic-cost.magic-gp::before, .magic-cost.magic-wup::before, .magic-cost.magic-wbp::before, .magic-cost.magic-ubp::before, .magic-cost.magic-urp::before, .magic-cost.magic-brp::before, .magic-cost.magic-bgp::before, .magic-cost.magic-rwp::before, .magic-cost.magic-rgp::before, .magic-cost.magic-gwp::before, .magic-cost.magic-gup::before {
+  display: inline-block;
+  -moz-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+.magic-cost.magic-tap-alt::before {
+  display: inline-block;
+  -moz-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  padding-left: 0.06em;
+  padding-bottom: 0.1em;
+}
+.magic-cost.magic-s::before {
+  color: #fff;
+  -webkit-text-stroke: 2px #fff;
+  font-size: 0.85em;
+  top: -0.05em;
+  position: relative;
+  display: inline-block;
+}
+.magic-cost.magic-s::after {
+  content: "\e619";
+  position: absolute;
+  color: #333;
+  margin-left: -0.9em;
+  font-size: 1.1em;
+}
+.magic-cost.magic-s-mtga::before {
+  color: #fff;
+}
+.magic-cost.magic-untap {
+  background-color: #111;
+  color: #fff;
+}
+.magic-cost.magic-shadow {
+  box-shadow: -0.06em 0.07em 0 #111, 0 0.06em 0 #111;
+}
+.magic-cost.magic-shadow.magic-untap {
+  box-shadow: -0.06em 0.07em 0 #fff, 0 0.06em 0 #fff;
+}
+
+.magic-split {
+  position: relative;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.magic-split::before,
+.magic-split::after {
+  font-size: 0.55em !important;
+  position: absolute;
+}
+
+.magic-split::before {
+  top: -0.38em;
+  left: 0.28em;
+}
+
+.magic-split::after {
+  top: 0.5em;
+  left: 1em;
+}
+
+span.magic-half {
+  width: 0.675em;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 0.675em;
+}
+span.magic-half > .magic-cost {
+  margin-left: -0.675em;
+}
+
+.magic-half {
+  width: 0.675em;
+  margin-left: 0.675em;
+  overflow: hidden;
+  border-radius: 0 1em 1em 0;
+}
+.magic-half::before {
+  margin-left: -0.65em;
+}
+
+.magic-100 {
+  width: 2.4em;
+}
+
+.magic-1000000 {
+  width: 5.4em;
+}
+
+/**
+ * planeswalker and other loyalty symbols */
+.magic-loyalty-up, .magic-loyalty-down, .magic-loyalty-zero, .magic-loyalty-start {
+  color: #111;
+  font-size: 1.5em;
+  position: relative;
+  text-align: center;
+}
+.magic-loyalty-start {
+  font-size: 2em;
+}
+.magic-loyalty-zero::after {
+  line-height: 2.1em !important;
+}
+.magic-loyalty-0::after, .magic-loyalty-1::after, .magic-loyalty-2::after, .magic-loyalty-3::after, .magic-loyalty-4::after, .magic-loyalty-5::after, .magic-loyalty-6::after, .magic-loyalty-7::after, .magic-loyalty-8::after, .magic-loyalty-9::after, .magic-loyalty-10::after, .magic-loyalty-11::after, .magic-loyalty-12::after, .magic-loyalty-13::after, .magic-loyalty-14::after, .magic-loyalty-15::after, .magic-loyalty-16::after, .magic-loyalty-17::after, .magic-loyalty-18::after, .magic-loyalty-19::after, .magic-loyalty-20::after, .magic-loyalty-25::after, .magic-loyalty-x::after {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.5em;
+  font-family: "MPlantin, Garamond, Palatino, 'Times New Roman', Times, serif";
+  position: absolute;
+  left: 0;
+  line-height: 2.25em;
+  width: 100%;
+  text-align: center;
+}
+.magic-loyalty-0::after {
+  content: "0";
+}
+.magic-loyalty-up.magic-loyalty-1::after {
+  content: "+1";
+}
+.magic-loyalty-up.magic-loyalty-2::after {
+  content: "+2";
+}
+.magic-loyalty-up.magic-loyalty-3::after {
+  content: "+3";
+}
+.magic-loyalty-up.magic-loyalty-4::after {
+  content: "+4";
+}
+.magic-loyalty-up.magic-loyalty-5::after {
+  content: "+5";
+}
+.magic-loyalty-up.magic-loyalty-6::after {
+  content: "+6";
+}
+.magic-loyalty-up.magic-loyalty-7::after {
+  content: "+7";
+}
+.magic-loyalty-up.magic-loyalty-8::after {
+  content: "+8";
+}
+.magic-loyalty-up.magic-loyalty-9::after {
+  content: "+9";
+}
+.magic-loyalty-up.magic-loyalty-10::after {
+  content: "+10";
+}
+.magic-loyalty-up.magic-loyalty-11::after {
+  content: "+10";
+}
+.magic-loyalty-up.magic-loyalty-12::after {
+  content: "+12";
+}
+.magic-loyalty-up.magic-loyalty-13::after {
+  content: "+13";
+}
+.magic-loyalty-up.magic-loyalty-14::after {
+  content: "+14";
+}
+.magic-loyalty-up.magic-loyalty-15::after {
+  content: "+15";
+}
+.magic-loyalty-up.magic-loyalty-16::after {
+  content: "+16";
+}
+.magic-loyalty-up.magic-loyalty-17::after {
+  content: "+17";
+}
+.magic-loyalty-up.magic-loyalty-18::after {
+  content: "+18";
+}
+.magic-loyalty-up.magic-loyalty-19::after {
+  content: "+19";
+}
+.magic-loyalty-up.magic-loyalty-20::after {
+  content: "+20";
+}
+.magic-loyalty-up.magic-loyalty-25::after {
+  content: "+25";
+}
+.magic-loyalty-up.magic-loyalty-x::after {
+  content: "+X";
+}
+.magic-loyalty-start.magic-loyalty-1::after {
+  content: "1";
+}
+.magic-loyalty-start.magic-loyalty-2::after {
+  content: "2";
+}
+.magic-loyalty-start.magic-loyalty-3::after {
+  content: "3";
+}
+.magic-loyalty-start.magic-loyalty-4::after {
+  content: "4";
+}
+.magic-loyalty-start.magic-loyalty-5::after {
+  content: "5";
+}
+.magic-loyalty-start.magic-loyalty-6::after {
+  content: "6";
+}
+.magic-loyalty-start.magic-loyalty-7::after {
+  content: "7";
+}
+.magic-loyalty-start.magic-loyalty-8::after {
+  content: "8";
+}
+.magic-loyalty-start.magic-loyalty-9::after {
+  content: "9";
+}
+.magic-loyalty-start.magic-loyalty-10::after {
+  content: "10";
+}
+.magic-loyalty-start.magic-loyalty-11::after {
+  content: "11";
+}
+.magic-loyalty-start.magic-loyalty-12::after {
+  content: "12";
+}
+.magic-loyalty-start.magic-loyalty-13::after {
+  content: "13";
+}
+.magic-loyalty-start.magic-loyalty-14::after {
+  content: "14";
+}
+.magic-loyalty-start.magic-loyalty-15::after {
+  content: "15";
+}
+.magic-loyalty-start.magic-loyalty-16::after {
+  content: "16";
+}
+.magic-loyalty-start.magic-loyalty-17::after {
+  content: "17";
+}
+.magic-loyalty-start.magic-loyalty-18::after {
+  content: "18";
+}
+.magic-loyalty-start.magic-loyalty-19::after {
+  content: "19";
+}
+.magic-loyalty-start.magic-loyalty-20::after {
+  content: "20";
+}
+.magic-loyalty-start.magic-loyalty-25::after {
+  content: "25";
+}
+.magic-loyalty-start.magic-loyalty-x::after {
+  content: "X";
+}
+.magic-loyalty-down::after {
+  line-height: 2em;
+}
+.magic-loyalty-down.magic-loyalty-1::after {
+  content: "-1";
+}
+.magic-loyalty-down.magic-loyalty-2::after {
+  content: "-2";
+}
+.magic-loyalty-down.magic-loyalty-3::after {
+  content: "-3";
+}
+.magic-loyalty-down.magic-loyalty-4::after {
+  content: "-4";
+}
+.magic-loyalty-down.magic-loyalty-5::after {
+  content: "-5";
+}
+.magic-loyalty-down.magic-loyalty-6::after {
+  content: "-6";
+}
+.magic-loyalty-down.magic-loyalty-7::after {
+  content: "-7";
+}
+.magic-loyalty-down.magic-loyalty-8::after {
+  content: "-8";
+}
+.magic-loyalty-down.magic-loyalty-9::after {
+  content: "-9";
+}
+.magic-loyalty-down.magic-loyalty-10::after {
+  content: "-10";
+}
+.magic-loyalty-down.magic-loyalty-11::after {
+  content: "-11";
+}
+.magic-loyalty-down.magic-loyalty-12::after {
+  content: "-12";
+}
+.magic-loyalty-down.magic-loyalty-13::after {
+  content: "-13";
+}
+.magic-loyalty-down.magic-loyalty-14::after {
+  content: "-14";
+}
+.magic-loyalty-down.magic-loyalty-15::after {
+  content: "-15";
+}
+.magic-loyalty-down.magic-loyalty-16::after {
+  content: "-16";
+}
+.magic-loyalty-down.magic-loyalty-17::after {
+  content: "-17";
+}
+.magic-loyalty-down.magic-loyalty-18::after {
+  content: "-18";
+}
+.magic-loyalty-down.magic-loyalty-19::after {
+  content: "-19";
+}
+.magic-loyalty-down.magic-loyalty-20::after {
+  content: "-20";
+}
+.magic-loyalty-down.magic-loyalty-25::after {
+  content: "-25";
+}
+.magic-loyalty-down.magic-loyalty-x::after {
+  content: "-X";
+}
+.magic-loyalty-outline::before {
+  color: transparent;
+  -webkit-text-stroke: 0.03em #111;
+}
+.magic-loyalty-outline::after {
+  color: #111;
+}
+.magic-loyalty-outline.magic-loyalty-start {
+  font-size: 1.6em;
+}
+
+.magic-saga {
+  color: #111;
+}
+.magic-saga-1::after, .magic-saga-2::after, .magic-saga-3::after, .magic-saga-4::after, .magic-saga-5::after {
+  color: #fff;
+  display: inline-block;
+  font-size: 0.6em;
+  font-family: "MPlantin, Garamond, Palatino, 'Times New Roman', Times, serif";
+  position: absolute;
+  left: 0;
+  line-height: 2em;
+  width: 100%;
+  text-align: center;
+}
+.magic-saga-1::after {
+  content: "I";
+}
+.magic-saga-2::after {
+  content: "II";
+}
+.magic-saga-3::after {
+  content: "III";
+}
+.magic-saga-4::after {
+  content: "IV";
+}
+.magic-saga-5::after {
+  content: "V";
+}
+
+.magic-level > span {
+  font-size: 0.33em;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000;
+  font-family: "MPlantin, Garamond, Palatino, 'Times New Roman', Times, serif";
+  width: 76%;
+  text-align: center;
+  line-height: 3.8;
+}
+.magic-level::after {
+  color: rgba(0, 0, 0, 0.25);
+  display: block;
+  font-size: 1em;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.magic-dfc {
+  color: #111;
+  border: 0.05em solid #111;
+  border-radius: 2em;
+  padding: 0.025em;
+}
+
+.magic-2x {
+  font-size: 1.75em;
+}
+
+.magic-3x {
+  font-size: 2.25em;
+}
+
+.magic-4x {
+  font-size: 3em;
+}
+
+.magic-5x {
+  font-size: 3.75em;
+}
+
+.magic-6x {
+  font-size: 4.5em;
+}
+
+/*
+ * Fixed width */
+.magic-fw {
+  width: 1em;
+  text-align: center;
+}
+
+.magic-duo {
+  color: #fff;
+}
+.magic-duo::after {
+  color: #000;
+  content: "";
+  display: block;
+  font-size: 1em;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.magic-duo.magic-multicolor::after {
+  content: "\e986";
+}
+.magic-duo.magic-school-lorehold::after {
+  content: "\e99b";
+}
+.magic-duo.magic-school-prismari::after {
+  content: "\e99d";
+}
+.magic-duo.magic-school-quandrix::after {
+  content: "\e99f";
+}
+.magic-duo.magic-school-silverquill::after {
+  content: "\e9a1";
+}
+.magic-duo.magic-school-witherbloom::before {
+  content: "\e9a3";
+}
+.magic-duo.magic-school-witherbloom::after {
+  content: "\e9a4";
+}
+.magic-duo-color::before {
+  color: #010101;
+}
+.magic-duo-color.magic-multicolor::after {
+  color: #cca753;
+}
+.magic-duo-color.magic-multicolor.magic-grad::after {
+  background: linear-gradient(45deg, #cca54f 0%, #e0d3bb 50%, #cca54f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.magic-duo-color.magic-school-lorehold::before {
+  color: #a03731;
+}
+.magic-duo-color.magic-school-lorehold::after {
+  color: #e4e8c7;
+}
+.magic-duo-color.magic-school-prismari::before {
+  color: #a23431;
+}
+.magic-duo-color.magic-school-prismari::after {
+  color: #322f5c;
+}
+.magic-duo-color.magic-school-quandrix::before {
+  color: #352e5f;
+}
+.magic-duo-color.magic-school-quandrix::after {
+  color: #519e52;
+}
+.magic-duo-color.magic-school-silverquill::before {
+  color: #181616;
+}
+.magic-duo-color.magic-school-silverquill::after {
+  color: #e5e9ca;
+}
+.magic-duo-color.magic-school-witherbloom::before {
+  color: #2f312d;
+}
+.magic-duo-color.magic-school-witherbloom::after {
+  color: #4f9b4f;
+}
+
+.magic-ci {
+  border-radius: 100%;
+  box-shadow: inset 0 0 1px #fff;
+  line-height: 0.95em;
+  width: 1em;
+  height: 1em;
+}
+.magic-ci::before {
+  color: #010101;
+}
+.magic-ci-1::before {
+  content: "\e98a";
+}
+.magic-ci-2::before {
+  content: "\e98b";
+}
+.magic-ci-3::before {
+  content: "\e98c";
+}
+.magic-ci-4::before {
+  content: "\e98d";
+}
+.magic-ci-5::before {
+  content: "\e98e";
+}
+.magic-ci-w {
+  background: #fff;
+}
+.magic-ci-u {
+  background: #3b6ba0;
+}
+.magic-ci-b {
+  background: #383431;
+}
+.magic-ci-r {
+  background: #c6553e;
+}
+.magic-ci-g {
+  background: #3d684b;
+}
+.magic-ci-wu, .magic-ci-uw, .magic-ci-azorius {
+  background: conic-gradient(#fff 45deg, #3b6ba0 45deg 225deg, #fff 225deg);
+}
+.magic-ci-wb, .magic-ci-bw, .magic-ci-orzhov {
+  background: conic-gradient(#fff 45deg, #383431 45deg 225deg, #fff 225deg);
+}
+.magic-ci-ub, .magic-ci-bu, .magic-ci-dimir {
+  background: conic-gradient(#3b6ba0 45deg, #383431 45deg 225deg, #3b6ba0 225deg);
+}
+.magic-ci-ur, .magic-ci-ru, .magic-ci-izzet {
+  background: conic-gradient(#3b6ba0 45deg, #c6553e 45deg 225deg, #3b6ba0 225deg);
+}
+.magic-ci-bg, .magic-ci-gb, .magic-ci-golgari, .magic-ci-rock {
+  background: conic-gradient(#383431 45deg, #3d684b 45deg 225deg, #383431 225deg);
+}
+.magic-ci-br, .magic-ci-rb, .magic-ci-rakdos {
+  background: conic-gradient(#383431 45deg, #c6553e 45deg 225deg, #383431 225deg);
+}
+.magic-ci-rw, .magic-ci-wr, .magic-ci-boros {
+  background: conic-gradient(#c6553e 45deg, #fff 45deg 225deg, #c6553e 225deg);
+}
+.magic-ci-rg, .magic-ci-gr, .magic-ci-gruul {
+  background: conic-gradient(#c6553e 45deg, #3d684b 45deg 225deg, #c6553e 225deg);
+}
+.magic-ci-gu, .magic-ci-ug, .magic-ci-simic {
+  background: conic-gradient(#3d684b 45deg, #3b6ba0 45deg 225deg, #3d684b 225deg);
+}
+.magic-ci-gw, .magic-ci-wg, .magic-ci-selesnya {
+  background: conic-gradient(#3d684b 45deg, #fff 45deg 225deg, #3d684b 225deg);
+}
+.magic-ci-wug, .magic-ci-wgu, .magic-ci-ugw, .magic-ci-uwg, .magic-ci-gwu, .magic-ci-guw, .magic-ci-bant {
+  background: conic-gradient(#3b6ba0 60deg, #3d684b 60deg 180deg, #fff 180deg 300deg, #3b6ba0 300deg);
+}
+.magic-ci-ubw, .magic-ci-uwb, .magic-ci-buw, .magic-ci-bwu, .magic-ci-wub, .magic-ci-wbu, .magic-ci-esper {
+  background: conic-gradient(#383431 60deg, #fff 60deg 180deg, #3b6ba0 180deg 300deg, #383431 300deg);
+}
+.magic-ci-bru, .magic-ci-bur, .magic-ci-rbu, .magic-ci-rub, .magic-ci-ubr, .magic-ci-urb, .magic-ci-grixis {
+  background: conic-gradient(#c6553e 60deg, #3b6ba0 60deg 180deg, #383431 180deg 300deg, #c6553e 300deg);
+}
+.magic-ci-rgb, .magic-ci-rbg, .magic-ci-grb, .magic-ci-gbr, .magic-ci-brg, .magic-ci-bgr, .magic-ci-jund {
+  background: conic-gradient(#3d684b 60deg, #383431 60deg 180deg, #c6553e 180deg 300deg, #3d684b 300deg);
+}
+.magic-ci-gwr, .magic-ci-grw, .magic-ci-wgr, .magic-ci-wrg, .magic-ci-rgw, .magic-ci-rwg, .magic-ci-naya {
+  background: conic-gradient(#fff 60deg, #c6553e 60deg 180deg, #3d684b 180deg 300deg, #fff 300deg);
+}
+.magic-ci-wbg, .magic-ci-wgb, .magic-ci-bwg, .magic-ci-bgw, .magic-ci-gwb, .magic-ci-gbw, .magic-ci-abzan, .magic-ci-junk, .magic-ci-necra {
+  background: conic-gradient(#383431 60deg, #3d684b 60deg 180deg, #fff 180deg 300deg, #383431 300deg);
+}
+.magic-ci-urw, .magic-ci-uwr, .magic-ci-ruw, .magic-ci-rwu, .magic-ci-wur, .magic-ci-wru, .magic-ci-jeskai, .magic-ci-raka {
+  background: conic-gradient(#c6553e 60deg, #fff 60deg 180deg, #3b6ba0 180deg 300deg, #c6553e 300deg);
+}
+.magic-ci-bgu, .magic-ci-bug, .magic-ci-gbu, .magic-ci-gub, .magic-ci-ubg, .magic-ci-ugb, .magic-ci-sultai, .magic-ci-bug, .magic-ci-ana {
+  background: conic-gradient(#3d684b 60deg, #3b6ba0 60deg 180deg, #383431 180deg 300deg, #3d684b 300deg);
+}
+.magic-ci-rwb, .magic-ci-rbw, .magic-ci-wrb, .magic-ci-wbr, .magic-ci-brw, .magic-ci-bwr, .magic-ci-mardu, .magic-ci-dega {
+  background: conic-gradient(#fff 60deg, #383431 60deg 180deg, #c6553e 180deg 300deg, #fff 300deg);
+}
+.magic-ci-gur, .magic-ci-gru, .magic-ci-ugr, .magic-ci-urg, .magic-ci-rgu, .magic-ci-rug, .magic-ci-temur, .magic-ci-ceta {
+  background: conic-gradient(#3b6ba0 60deg, #c6553e 60deg 180deg, #3d684b 180deg 300deg, #3b6ba0 300deg);
+}
+.magic-ci-ubrg, .magic-ci-ubgr, .magic-ci-ugbr, .magic-ci-ugrb, .magic-ci-urbg, .magic-ci-urgb, .magic-ci-bgru, .magic-ci-bgur, .magic-ci-brgu, .magic-ci-brug, .magic-ci-bugr, .magic-ci-burg, .magic-ci-gbru, .magic-ci-gbur, .magic-ci-grbu, .magic-ci-grub, .magic-ci-gubr, .magic-ci-gurb, .magic-ci-rbgu, .magic-ci-rbug, .magic-ci-rgbu, .magic-ci-rgub, .magic-ci-rubg, .magic-ci-rugb, .magic-ci-glint {
+  background: conic-gradient(#3b6ba0 45deg, #383431 45deg 135deg, #c6553e 135deg 225deg, #3d684b 225deg 315deg, #3b6ba0 315deg);
+}
+.magic-ci-brgw, .magic-ci-bgrw, .magic-ci-bgwr, .magic-ci-brwg, .magic-ci-bwgr, .magic-ci-bwrg, .magic-ci-gbrw, .magic-ci-gbwr, .magic-ci-grbw, .magic-ci-grwb, .magic-ci-gwbr, .magic-ci-gwrb, .magic-ci-rbgw, .magic-ci-rbwg, .magic-ci-rgbw, .magic-ci-rgwb, .magic-ci-rwbg, .magic-ci-rwgb, .magic-ci-wbgr, .magic-ci-wbrg, .magic-ci-wgbr, .magic-ci-wgrb, .magic-ci-wrbg, .magic-ci-wrgb, .magic-ci-dune {
+  background: conic-gradient(#383431 45deg, #c6553e 45deg 135deg, #3d684b 135deg 225deg, #fff 225deg 315deg, #383431 315deg);
+}
+.magic-ci-rgwu, .magic-ci-gruw, .magic-ci-grwu, .magic-ci-gurw, .magic-ci-guwr, .magic-ci-gwru, .magic-ci-gwur, .magic-ci-rguw, .magic-ci-rugw, .magic-ci-ruwg, .magic-ci-rwgu, .magic-ci-rwug, .magic-ci-ugrw, .magic-ci-ugwr, .magic-ci-urgw, .magic-ci-urwg, .magic-ci-uwgr, .magic-ci-uwrg, .magic-ci-wgru, .magic-ci-wgur, .magic-ci-wrgu, .magic-ci-wrug, .magic-ci-wugr, .magic-ci-wurg, .magic-ci-ink {
+  background: conic-gradient(#c6553e 45deg, #3d684b 45deg 135deg, #fff 135deg 225deg, #3b6ba0 225deg 315deg, #c6553e 315deg);
+}
+.magic-ci-gwub, .magic-ci-bguw, .magic-ci-bgwu, .magic-ci-bugw, .magic-ci-buwg, .magic-ci-bwgu, .magic-ci-bwug, .magic-ci-gbuw, .magic-ci-gbwu, .magic-ci-gubw, .magic-ci-guwb, .magic-ci-gwbu, .magic-ci-ubgw, .magic-ci-ubwg, .magic-ci-ugbw, .magic-ci-ugwb, .magic-ci-uwbg, .magic-ci-uwgb, .magic-ci-wbgu, .magic-ci-wbug, .magic-ci-wgbu, .magic-ci-wgub, .magic-ci-wubg, .magic-ci-wugb, .magic-ci-witch {
+  background: conic-gradient(#3d684b 45deg, #fff 45deg 135deg, #3b6ba0 135deg 225deg, #383431 225deg 315deg, #3d684b 315deg);
+}
+.magic-ci-wubr, .magic-ci-bruw, .magic-ci-brwu, .magic-ci-burw, .magic-ci-buwr, .magic-ci-bwru, .magic-ci-bwur, .magic-ci-rbuw, .magic-ci-rbwu, .magic-ci-rubw, .magic-ci-ruwb, .magic-ci-rwbu, .magic-ci-rwub, .magic-ci-ubrw, .magic-ci-ubwr, .magic-ci-urbw, .magic-ci-urwb, .magic-ci-uwbr, .magic-ci-uwrb, .magic-ci-wbru, .magic-ci-wbur, .magic-ci-wrbu, .magic-ci-wrub, .magic-ci-wurb, .magic-ci-yore {
+  background: conic-gradient(#fff 45deg, #3b6ba0 45deg 135deg, #383431 135deg 225deg, #c6553e 225deg 315deg, #fff 315deg);
+}
+.magic-ci-wubrg, .magic-ci-rugbw, .magic-ci-rugwb, .magic-ci-ruwbg, .magic-ci-ruwgb, .magic-ci-rwbgu, .magic-ci-rwbug, .magic-ci-rwgbu, .magic-ci-rwgub, .magic-ci-rwubg, .magic-ci-rwugb, .magic-ci-ubgrw, .magic-ci-ubgwr, .magic-ci-ubrgw, .magic-ci-ubrwg, .magic-ci-ubwgr, .magic-ci-ubwrg, .magic-ci-ugbrw, .magic-ci-ugbwr, .magic-ci-ugrbw, .magic-ci-ugrwb, .magic-ci-ugwbr, .magic-ci-ugwrb, .magic-ci-urbgw, .magic-ci-urbwg, .magic-ci-urgbw, .magic-ci-urgwb, .magic-ci-urwbg, .magic-ci-urwgb, .magic-ci-uwbgr, .magic-ci-uwbrg, .magic-ci-uwgbr, .magic-ci-uwgrb, .magic-ci-uwrbg, .magic-ci-uwrgb, .magic-ci-wbgru, .magic-ci-wbgur, .magic-ci-wbrgu, .magic-ci-wbrug, .magic-ci-wbugr, .magic-ci-wburg, .magic-ci-wgbru, .magic-ci-wgbur, .magic-ci-wgrbu, .magic-ci-wgrub, .magic-ci-wgubr, .magic-ci-wgurb, .magic-ci-wrbgu, .magic-ci-wrbug, .magic-ci-wrgbu, .magic-ci-wrgub, .magic-ci-wrubg, .magic-ci-wrugb, .magic-ci-wubgr, .magic-ci-wugbr, .magic-ci-wugrb, .magic-ci-wurbg, .magic-ci-wurgb, .magic-ci-bgruw, .magic-ci-bgrwu, .magic-ci-bgurw, .magic-ci-bguwr, .magic-ci-bgwru, .magic-ci-bgwur, .magic-ci-brguw, .magic-ci-brgwu, .magic-ci-brugw, .magic-ci-bruwg, .magic-ci-brwgu, .magic-ci-brwug, .magic-ci-bugrw, .magic-ci-bugwr, .magic-ci-burgw, .magic-ci-burwg, .magic-ci-buwgr, .magic-ci-buwrg, .magic-ci-bwgru, .magic-ci-bwgur, .magic-ci-bwrgu, .magic-ci-bwrug, .magic-ci-bwugr, .magic-ci-bwurg, .magic-ci-gbruw, .magic-ci-gbrwu, .magic-ci-gburw, .magic-ci-gbuwr, .magic-ci-gbwru, .magic-ci-gbwur, .magic-ci-grbuw, .magic-ci-grbwu, .magic-ci-grubw, .magic-ci-gruwb, .magic-ci-grwbu, .magic-ci-grwub, .magic-ci-gubrw, .magic-ci-gubwr, .magic-ci-gurbw, .magic-ci-gurwb, .magic-ci-guwbr, .magic-ci-guwrb, .magic-ci-gwbru, .magic-ci-gwbur, .magic-ci-gwrbu, .magic-ci-gwrub, .magic-ci-gwubr, .magic-ci-gwurb, .magic-ci-rbguw, .magic-ci-rbgwu, .magic-ci-rbugw, .magic-ci-rbuwg, .magic-ci-rbwgu, .magic-ci-rbwug, .magic-ci-rgbuw, .magic-ci-rgbwu, .magic-ci-rgubw, .magic-ci-rguwb, .magic-ci-rgwbu, .magic-ci-rgwub, .magic-ci-rubgw, .magic-ci-rubwg, .magic-ci-5 {
+  background: conic-gradient(#fff 36deg, #3b6ba0 36deg 108deg, #383431 108deg 180deg, #c6553e 180deg 252deg, #3d684b 252deg 324deg, #fff 324deg);
+}
+
+.magic-mechanic {
+  background: linear-gradient(0deg, #c8913b 0%, #ecc65a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=mana.css.map */

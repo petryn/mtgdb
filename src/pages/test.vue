@@ -1,6 +1,8 @@
 <script setup>
 import { inject } from 'vue';
-import prices from '../data/prices.json';
+
+const res = await fetch('/data/prices.json');
+const prices = await res.json();
 
 const dataBase = inject('dataBase');
 const localData = dataBase.getData();

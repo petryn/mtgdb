@@ -28,6 +28,11 @@
             const setData = await res.json();
 
             for(const [cardId, q] of Object.entries(setCards)){
+                //if empty or 0 skip
+                if(typeof q !== 'number' || q <= 0){
+                    continue;
+                }
+
                 let cardData = setData.data.cards.find(e => e.uuid === cardId);
                 cardData.swapQuantity = q;
 
@@ -56,7 +61,7 @@
 		
         <FilterCardsComponent @return="updateCards" :cards="allCards" />
 	</div>
-	<div class="row row-cols-4">
+	<div class="row row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 		<CardCollComponent v-for="card in filteredCards" :card="card" :key="card.uuid" />
 	</div>
 </template>

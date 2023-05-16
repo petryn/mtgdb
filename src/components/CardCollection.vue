@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, onUpdated, reactive } from 'vue';
+	import { ref, reactive } from 'vue';
 	import { vIntersectionObserver } from '@vueuse/components';
 
 	const props = defineProps(['card']);
@@ -28,7 +28,6 @@
 			spinner.value.style.display = "none";
 		}
 	}
-
 </script>
 
 <template>
@@ -38,9 +37,11 @@
 			<div class="row">
 				<div class="col-md-8 pe-0">
 					<div class="card-body p-2">
-						<h6 class="card-title ">
+						<h6 class="card-title">
 							{{cardData.name}}
-							<i class="ss float-end ss-2x ss-fw" :class="`ss-${cardData.setCode.toLowerCase()} ss-${cardData.rarity}`"></i>
+							
+							<i class="ss fs-4 ss-fw" :class="`ss-${cardData.setCode.toLowerCase()} ss-${cardData.rarity}`"></i>
+							<span class="badge float-end bg-secondary">{{cardData.number}}</span>
 						</h6>
 					</div>
 					<ul class="list-group list-group-flush border-top fw-light">
@@ -48,7 +49,7 @@
 							<div class="row my-1">
 								<div class="col-4"><span class="align-middle ms-2">Quantity:</span></div>
 								<div class="col-8">
-									{{cardData.number}}
+									{{cardData.swapQuantity}}
 								</div>
 							</div>	
 						</li>
@@ -56,9 +57,7 @@
 							<div class="row my-1">
 								<div class="col-4"><span class="align-middle ms-2">Color:</span></div>
 								<div class="col-8">
-									<span></span>
-									
-									{{cardData.colors}}
+									<i v-for="color in cardData.colors" class="magic magic-cost" :class="'magic-'+color.toLowerCase()"></i>
 								</div>
 							</div>	
 						</li>
@@ -72,9 +71,17 @@
 						</li>
 						<li class="list-group-item p-0">
 							<div class="row my-1">
-								<div class="col-4"><span class="align-middle ms-2">Number:</span></div>
+								<div class="col-4"><span class="align-middle ms-2">Rarity:</span></div>
 								<div class="col-8">
-									{{cardData.number}}
+									{{cardData.rarity}}
+								</div>
+							</div>	
+						</li>
+						<li class="list-group-item p-0">
+							<div class="row my-1">
+								<div class="col-4"><span class="align-middle ms-2">Mana cost:</span></div>
+								<div class="col-8">
+									{{cardData.manaValue}}
 								</div>
 							</div>	
 						</li>
@@ -97,4 +104,11 @@
 
 </template>
 
-
+<style scoped>
+	div {
+		font-size: 14px;
+	}
+	.card-title {
+		margin-bottom: 0;
+	}
+</style>

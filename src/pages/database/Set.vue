@@ -42,17 +42,21 @@
 	}
 
 	//update database
-	function updateCard(card){		
-		set(dbRef(db, collectionDbPath+'/'+card.uuid), card.collection);
-		set(dbRef(db, swapDbPath+'/'+card.uuid), card.swap);
-		set(dbRef(db, notesDbPath+'/'+card.uuid), card.notes);
+	function updateCard(pathType, cardUuid, newValue){
+		if(pathType == 'collection'){
+			set(dbRef(db, collectionDbPath+'/'+cardUuid), newValue);
+		}else if(pathType == 'swap'){
+			set(dbRef(db, swapDbPath+'/'+cardUuid), newValue);
+		}else if(pathType == 'notes'){
+			set(dbRef(db, notesDbPath+'/'+cardUuid), newValue);
+		}
 	}
 
 	//holds cards to show on page
 	let filteredCards = ref(cards);
 
 	//update card list from filter component
-	function updateCards(cards){
+	function filterCards(cards){
 		filteredCards.value = cards;
 	}
 </script>
@@ -63,10 +67,10 @@
 			<h3 >{{setData.data.name}}</h3>
 		</div>
 
-		<FilterCardsComponent @return="updateCards" :cards="cards" />
+		<FilterCardsComponent @return="filterCards" :cards="cards" />
 		
 	</div>
-	<div class="row row-cols-4">
+	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 		<CardDbComponent v-for="card in filteredCards" :card="card" @upd="updateCard" :key="card.uuid" />
 	</div>
 </template>  

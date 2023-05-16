@@ -37,8 +37,12 @@
 			return cardData.collection;
 		},
 		set(value) {
+			if(typeof value !== 'number' || value <= 0){
+				value = null;
+			}
+			
 			cardData.collection = value;
-			emit('upd', cardData);
+			emit('upd', 'collection', cardData.uuid, value);
 		}
 	});
 
@@ -47,8 +51,12 @@
 			return cardData.swap;
 		},
 		set(value) {
+			if(typeof value !== 'number' || value <= 0){
+				value = null;
+			}
+
 			cardData.swap = value;
-			emit('upd', cardData);
+			emit('upd', 'swap', cardData.uuid, value);
 		}
 	});
 
@@ -57,8 +65,12 @@
 			return cardData.notes;
 		},
 		set(value) {
+			if(value === '' || value === undefined){
+				value = null;
+			}
+
 			cardData.notes = value;
-			emit('upd', cardData);
+			emit('upd', 'notes', cardData.uuid, value);			
 		}
 	});
 

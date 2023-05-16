@@ -6,10 +6,22 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
+    "rewrites": [      
       {
         "source": "**",
         "destination": "/index.html"
+      },
+      {
+        "source": "!/@(data|css)/**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "/css/mana.css",
+        "headers": [
+          {"key": "Content-Type", "value": "text/css"}
+        ]
       }
     ]
   }

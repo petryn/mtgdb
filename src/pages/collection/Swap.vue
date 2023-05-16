@@ -3,8 +3,8 @@
     import { useRoute } from 'vue-router';
     import { useDatabase } from 'vuefire';
 	import { ref as dbRef, get } from 'firebase/database';
-    import Card from '@/components/CardCollection.vue';
-    import FilterCards from '@/components/FilterCards.vue';
+    import CardCollComponent from '@/components/CardCollection.vue';
+    import FilterCardsComponent from '@/components/FilterCards.vue';
 
     //init
     const db = useDatabase();
@@ -54,9 +54,9 @@
 			<h3>Swap list</h3>
 		</div>
 		
-        <FilterCards @return="updateCards" :cards="allCards" />
+        <FilterCardsComponent @return="updateCards" :cards="allCards" />
 	</div>
 	<div class="row row-cols-4">
-		<Card v-for="card in filteredCards" :card="card" :key="card.uuid" />
+		<CardCollComponent v-for="card in filteredCards" :card="card" :key="card.uuid" />
 	</div>
 </template>

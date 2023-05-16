@@ -1,10 +1,10 @@
 <script setup>
 	import { useRoute } from 'vue-router';
-	import { ref, onMounted, inject } from 'vue';
+	import { ref, inject } from 'vue';
 	import { useDatabase, useCurrentUser } from 'vuefire';
 	import { ref as dbRef, set } from 'firebase/database';
-	import card from '@/components/CardDatabase.vue';
-	import FilterCards from '@/components/FilterCards.vue';
+	import CardDbComponent from '@/components/CardDatabase.vue';
+	import FilterCardsComponent from '@/components/FilterCards.vue';
 
 	const db = useDatabase();
 	const route = useRoute();
@@ -29,7 +29,7 @@
 	const notesDbPath = dbPath+'/notes/'+setCode;
 
 	//get cached user data
-	const userData = inject('userData');
+	const userData = inject('userData', {});
 
 	for(const card of cards){
 		const isSetColl = userData?.collection?.[setCode]?.[card.uuid] ?? false;
@@ -63,10 +63,10 @@
 			<h3 >{{setData.data.name}}</h3>
 		</div>
 
-		<FilterCards @return="updateCards" :cards="cards" />
+		<FilterCardsComponent @return="updateCards" :cards="cards" />
 		
 	</div>
 	<div class="row row-cols-4">
-		<card v-for="card in filteredCards" :card="card" @upd="updateCard" :key="card.uuid" />
+		<CardDbComponent v-for="card in filteredCards" :card="card" @upd="updateCard" :key="card.uuid" />
 	</div>
 </template>  

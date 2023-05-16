@@ -62,10 +62,6 @@
 		}
 	});
 
-	defineExpose({
-		loadImage
-	});
-
 </script>
 
 <template>

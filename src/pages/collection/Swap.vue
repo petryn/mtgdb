@@ -12,6 +12,10 @@
     const getUid = route.params.uid;
     const dbPath = 'users/'+getUid+'/swap/';
 
+    //filters setup
+    const selectedFilters = ['name', 'number', 'color'];
+    let availableColors = [];
+
     //get database
     const swapDb = await get(dbRef(db, dbPath));
 
@@ -36,6 +40,14 @@
                 let cardData = setData.data.cards.find(e => e.uuid === cardId);
                 cardData.swapQuantity = q;
 
+                //loop card colors
+                for(const color of cardData.colors){
+                    //add if not in filters already
+                    if(availableColors.includes(color) === false){
+                        availableColors.push(color);
+                    }
+                }               
+
                 allCards.push(cardData);
             }
         }
@@ -59,7 +71,7 @@
 			<h3>Swap list</h3>
 		</div>
 		
-        <FilterCardsComponent @return="updateCards" :cards="allCards" />
+        <FilterCardsComponent @return="updateCards" :cards="allCards" :filters="selectedFilters" :colors="availableColors" />
 	</div>
 	<div class="row row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 		<CardCollComponent v-for="card in filteredCards" :card="card" :key="card.uuid" />

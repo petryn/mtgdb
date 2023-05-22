@@ -50,6 +50,7 @@ const router = createRouter({
 
 //login guard
 router.beforeEach(async (to) => {
+	console.log('start');
 	const currentUser = await getCurrentUser();
 
 	if(to.meta.requiresAuth && !currentUser){	
@@ -59,5 +60,10 @@ router.beforeEach(async (to) => {
 		return {path: '/'};
 	}
 });
+
+router.afterEach(() => {
+	console.log('end');
+});
+
 
 export {router as default};

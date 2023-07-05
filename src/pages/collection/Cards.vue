@@ -2,14 +2,11 @@
     import { ref, inject } from 'vue';
     import CardCollComponent from '@/components/CardCollection.vue';
     import FilterCardsComponent from '@/components/FilterCards.vue';
+    import SubHeader from '@/components/SubHeader.vue';
+    import Pagination from '@/components/Pagination.vue';
 
     //init
     const userData = inject('userData', {});
-
-    //filters setup
-    const selectedFilters = ['name', 'number', 'color', 'type', 'rarity', 'text'];
-    let availableColors = [];
-    let availableTypes = [];
 
     //array for all cards
     let allCards = [];    
@@ -34,22 +31,14 @@
 
                 const cardData = setCards.find(e => e.uuid === cardId);
 
-                //loop card colors
-                for(const color of cardData.colors){
-                    //add if not in filters already
-                    if(availableColors.includes(color) === false){
-                        availableColors.push(color);
-                    }
-                }
-
-                if(availableTypes.includes(cardData.type) === false){
-                    availableTypes.push(cardData.type);
-                }
-
                 allCards.push(cardData);
             }
         }
     }
+
+    //holds cards to show on page
+    const pagedCards = ref();
+    const currentPage = ref(1);
 
     //holds cards to show on page
     let filteredCards = ref(allCards);
@@ -59,21 +48,30 @@
         filteredCards.value = cards;
     }
 
+    //update function from paginator component
+    function updatePaged(cards, cp){
+        pagedCards.value = cards;
+        currentPage.value = cp;
+    }
+
 </script>
 
 <template>
     <div v-if="allCards.length === 0">No cards in collection!</div>
 
-    <div class="row mb-3 align-items-center">
-		<div class="col-10">
-			<h3>Swap list</h3>
-		</div>
-		
-        <div class="col-2">        
-            <FilterCardsComponent @return="updateCards" :cards="allCards" :filters="selectedFilters" :colors="availableColors" :types="availableTypes" />
-        </div>
-	</div>
+    <SubHeader>
+        <template #title>
+            Collection cards
+        </template>        
+        <template #pagination>
+            <Pagination :cards="filteredCards" :selectedPage="currentPage" @return="updatePaged" />
+        </template>
+        <template #filter>
+            <FilterCardsComponent @return="updateCards" :cards="allCards" />
+        </template>
+    </SubHeader>
+
 	<div class="row row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
-		<CardCollComponent v-for="card in filteredCards" :card="card" :key="card.uuid" />
+		<CardCollComponent v-for="card in pagedCards" :card="card" :key="card.uuid" :showQuantity="false" />
 	</div>
 </template>

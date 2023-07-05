@@ -1,14 +1,12 @@
 <script setup>
-    import { ref, reactive } from 'vue';
+    import { ref } from 'vue';
 
 	const props = defineProps({
 		cards: Array,
 		filters: {
 			type: Array,
-			default: ['name', 'number']
-		},
-		colors: Array,
-		types: Array
+			default: ['name', 'number', 'color', 'type', 'subtype', 'supertype', 'rarity', 'text']
+		}
 	});
 
 	const filters = props.filters;
@@ -21,9 +19,38 @@
 	const searchColor = ref([]);
 	const searchRarity = ref();
 	const searchType = ref();
+	const searchSubType = ref();
+	const searchSuperType = ref();
 	const searchText = ref();	
 
     const emit = defineEmits(['return']);
+
+	//
+	let availableTypes = [];
+	let availableSubTypes = [];
+	let availableSuperTypes = [];
+
+	//loop all cards and set available filters
+	for(const card of props.cards){		
+
+		for(const t of card.types){
+			if(availableTypes.includes(t) === false){
+				availableTypes.push(t);
+			}
+		}
+
+		for(const s of card.subtypes){
+			if(availableSubTypes.includes(s) === false){
+				availableSubTypes.push(s);
+			}
+		}
+
+		for(const s of card.supertypes){
+			if(availableSuperTypes.includes(s) === false){
+				availableSuperTypes.push(s);
+			}
+		}
+	}
 
 	function filterCards(){	
 		outFiltered.value = props.cards;
@@ -47,11 +74,27 @@
 			});
 		}
 
+		//TYPE
 		if(searchType.value !== undefined && searchType.value !== ''){
 			tmp = tmp.filter(el => {				
-				return el.type === searchType.value;
+				return el.types.includes(searchType.value);
 			});
 		}
+
+		//SUBTYPE
+		if(searchSubType.value !== undefined && searchSubType.value !== ''){
+			tmp = tmp.filter(el => {				
+				return el.subtypes.includes(searchSubType.value);
+			});
+		}
+
+		//SUPERTYPES
+		if(searchSuperType.value !== undefined && searchSuperType.value !== ''){
+			tmp = tmp.filter(el => {				
+				return el.supertypes.includes(searchSuperType.value);
+			});
+		}
+
 
 		if(searchColor.value.length > 0){
 			for(const colorSelected of searchColor.value){
@@ -76,13 +119,11 @@
 
 <template>
 
-	<div class="row align-items-center">
-		<div class="col text-light">
-			Showing {{ outFiltered.length }} / {{ cardsTotal }}
-		</div>
+	<div class="row justify-content-end">
 
-		<div class="col">
-			<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter">
+		<div class="col-auto">
+			<span class="text-light me-2 align-middle">{{ outFiltered.length }} / {{ cardsTotal }}</span>
+			<button class="btn btn-sm btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter">
 				Filters
 			</button>
 		</div>	
@@ -115,7 +156,23 @@
 				<label class="ms-1 col-form-label text-light">Type:</label>
 				<select class="form-select form-select-sm" @change="filterCards()" v-model="searchType">
 					<option values="" selected></option>
-					<option v-for="type in props.types" :value="type">{{type}} </option>
+					<option v-for="type in availableTypes" :value="type">{{type}} </option>
+				</select>
+			</template>
+
+			<template v-if="filters.includes('subtype')">
+				<label class="ms-1 col-form-label text-light">Sub Type:</label>
+				<select class="form-select form-select-sm" @change="filterCards()" v-model="searchSubType">
+					<option values="" selected></option>
+					<option v-for="type in availableSubTypes" :value="type">{{type}} </option>
+				</select>
+			</template>
+
+			<template v-if="filters.includes('supertype')">
+				<label class="ms-1 col-form-label text-light">Super Type:</label>
+				<select class="form-select form-select-sm" @change="filterCards()" v-model="searchSuperType">
+					<option values="" selected></option>
+					<option v-for="type in availableSuperTypes" :value="type">{{type}} </option>
 				</select>
 			</template>
 
@@ -167,4 +224,6 @@
 	.magic {
 		margin-top: -5px;
 	}
+
+	
 </style>

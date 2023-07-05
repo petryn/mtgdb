@@ -24,7 +24,7 @@
 
 <template>
 
-	<table class="table table-light table-striped table-hover align-middle">
+	<table class="table table-light table-striped table-hover align-middle mt-3">
 		<thead>
 			<tr>
 				<th>&nbsp;</th>

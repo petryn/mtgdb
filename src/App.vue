@@ -7,7 +7,7 @@
 		<Header />
 	</Suspense>
 	
-	<div class="container-fluid pt-3">
+	<div class="container-fluid">
 		<Suspense>
 			<router-view></router-view>
 		</Suspense>		

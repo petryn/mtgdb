@@ -2,7 +2,13 @@
 	import { ref, reactive } from 'vue';
 	import { vIntersectionObserver } from '@vueuse/components';
 
-	const props = defineProps(['card']);
+	const props = defineProps({
+		card: Object,
+		showQuantity: {
+			type: Boolean,
+			default: true
+		}
+	});
 	const cardData = reactive(props.card);
 	const imgEl = ref(null);
 	const spinner = ref(null);
@@ -28,6 +34,8 @@
 			spinner.value.style.display = "none";
 		}
 	}
+
+	console.log(props);
 </script>
 
 <template>
@@ -45,7 +53,7 @@
 						</h6>
 					</div>
 					<ul class="list-group list-group-flush border-top fw-light">
-						<li class="list-group-item p-0">
+						<li v-if="props.showQuantity === true" class="list-group-item p-0">
 							<div class="row my-1">
 								<div class="col-4"><span class="align-middle ms-2">Quantity:</span></div>
 								<div class="col-8">

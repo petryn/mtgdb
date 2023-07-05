@@ -60,7 +60,7 @@
 </script>
 
 <template>
-	<div class="row mb-4 align-items-center">
+	<div class="row mb-3 mt-3 align-items-center">
 		<div class="col-auto">
 			<label for="name" class="ms-1 col-form-label text-light">Name:</label>
 		</div>

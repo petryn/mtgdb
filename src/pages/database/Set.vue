@@ -63,12 +63,13 @@
 
 <template>
 	<div class="row mb-3 align-items-center">
-		<div class="col-auto">
+		<div class="col-10">
 			<h3 >{{setData.data.name}}</h3>
 		</div>
 
-		<FilterCardsComponent @return="filterCards" :cards="cards" />
-		
+		<div class="col-2"> 
+			<FilterCardsComponent @return="filterCards" :cards="cards" />
+		</div>
 	</div>
 	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
 		<CardDbComponent v-for="card in filteredCards" :card="card" @upd="updateCard" :key="card.uuid" />
